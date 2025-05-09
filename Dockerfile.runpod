@@ -14,8 +14,8 @@ RUN : Setup environment \
     && apt-get update \
     && apt-get install \
     --yes \
-    wget \
     git \
+    wget \
     gosu \
     rsync \
     bc \

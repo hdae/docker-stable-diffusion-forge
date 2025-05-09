@@ -1,11 +1,11 @@
-name: "forge"
+name: "stablediffusion-forge"
 
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    image: hdae/stable-diffusion-forge:2025-05-10
+    image: hdae/stable-diffusion-forge-runpod:2025-05-10
     environment:
       - JUPYTER_PASSWORD=jupy73r
     ports:

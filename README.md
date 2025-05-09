@@ -18,11 +18,11 @@ docker push "hdae/stable-diffusion-forge-runpod:${tag}"
 
 以下はRunpodに記載しているREADMEのコピー
 
-# Stable Diffusion Forge (by [hdae](https://github.com/hdae))
+# Stable Diffusion Forge (template by [hdae](https://github.com/hdae))
 
-ちょっと速く起動できたり、NVIDIA Blackwellに対応してあったり。
+起動が少し速く、NVIDIA Blackwellにも対応しています。
 
-- Tested on B200 and RTX5090
+- Tested on `B200` and `RTX 5090`, and `RTX A5000`
 - Links
   - [GitHub](https://github.com/hdae/docker-stable-diffusion-forge)
   - [Report Issues](https://github.com/hdae/docker-stable-diffusion-forge/issues)
@@ -30,11 +30,11 @@ docker push "hdae/stable-diffusion-forge-runpod:${tag}"
 ## 使い方
 
 1. このテンプレートを使ってPodを起動します。
-2. Podが準備完了になるのを待ちます、1分ほどお待ち下さい。
+2. Podが準備完了になるまで待ちます。通常、1〜2分ほどかかります。
 3. デフォルトモデルのダウンロードが完了するのを待ちます。
   - または、Webターミナル / Jupyter Notebookを使用してカスタムモデルをダウンロードします。
 4. ポート7860にアクセスします。
-5. 画像生成を楽しみましょう！
+5. 画像生成をお楽しみください！
 
 ## モデルのダウンロード
 
@@ -46,7 +46,7 @@ wget https://civitai.com/api/download/models/[model_id] -O /workspace/models/Sta
 
 ## 謝辞
 
-以下のプロジェクトおよびモデルの開発者とコミュニティに感謝します。  
+以下のプロジェクトおよびモデルの開発者とコミュニティに心より感謝申し上げます。  
 彼らの素晴らしい仕事が、このDockerイメージの作成に不可欠でした。
 
 ### プロジェクト
@@ -68,7 +68,7 @@ It can boot a bit faster, and it supports NVIDIA Blackwell.
 1. Start a pod using this template.
 2. Wait for it to become ready. This usually takes about 1-2 minutes.
 3. Wait for the default model to download.
-  - or download a custom model using the Web Terminal / Jupyter Notebook.
+  - Alternatively, download a custom model using the Web Terminal / Jupyter Notebook.
 4. Access port 7860.
 5. Enjoy!
 
