@@ -11,7 +11,7 @@ Stable Diffusion ForgeをRunpodで簡単に動かすことができるやつ。
 ```
 tag="$(date +%F)"
 docker build . -f Dockerfile.runpod -t "hdae/stable-diffusion-forge-runpod:${tag}"
-docker push "hdae/stable-diffusion-forge:${tag}"
+docker push "hdae/stable-diffusion-forge-runpod:${tag}"
 ```
 
 ---
