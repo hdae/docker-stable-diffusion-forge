@@ -37,7 +37,6 @@ RUN : Setup environment \
     && : Rewrite permission \
     && chown -R runner:runner /data
 
-USER root
 WORKDIR /workspace
 
 COPY ./entrypoint.sh /

@@ -30,7 +30,7 @@ docker push "hdae/stable-diffusion-forge-runpod:${tag}"
 ## 使い方
 
 1. このテンプレートを使ってPodを起動します。
-2. Podが準備完了になるまで待ちます。通常、1〜2分ほどかかります。
+2. Podが準備完了になるまで待ちます。通常、1分ほどかかります。
 3. デフォルトモデルのダウンロードが完了するのを待ちます。
   - または、Webターミナル / Jupyter Notebookを使用してカスタムモデルをダウンロードします。
 4. ポート7860にアクセスします。
@@ -65,8 +65,8 @@ It can boot a bit faster, and it supports NVIDIA Blackwell.
 
 ## Usage
 
-1. Start a pod using this template.
-2. Wait for it to become ready. This usually takes about 1-2 minutes.
+1. Launch a pod using this template.
+2. Wait for it to become ready. This usually takes about 1 minutes.
 3. Wait for the default model to download.
   - Alternatively, download a custom model using the Web Terminal / Jupyter Notebook.
 4. Access port 7860.

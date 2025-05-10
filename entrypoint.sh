@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy files
-rsync -a /data/workspace/ /workspace 2>/dev/null
+rsync -a --inplace /data/workspace/ /workspace 2>/dev/null
 chown -Rf runner /workspace
 
 export install_dir="/"
