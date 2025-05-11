@@ -1,6 +1,6 @@
 # Stable Diffusion Forge on Docker / RunPod
 
-[RunPod Template](https://runpod.io/console/deploy?template=whdfh5h5d4&ref=oxrbnozc)
+[Deploy to RunPod](https://runpod.io/console/deploy?template=whdfh5h5d4&ref=oxrbnozc)
 
 Stable Diffusion ForgeをRunpodで簡単に動かすことができるやつ。
 
