@@ -32,21 +32,25 @@ docker push "hdae/stable-diffusion-forge-runpod:${tag}"
 1. このテンプレートを使ってPodを起動します。
 2. Podが準備完了になるまで待ちます。通常、1分ほどかかります。
 3. デフォルトモデルのダウンロードが完了するのを待ちます。
-  - または、Webターミナル / Jupyter Notebookを使用してカスタムモデルをダウンロードします。
+   - または、Webターミナル / Jupyter Notebookを使用してカスタムモデルをダウンロードします。
 4. ポート7860にアクセスします。
 5. 画像生成をお楽しみください！
 
 ## モデルのダウンロード
 
-追加のモデルをダウンロードするには`wget`を使用します。
+追加のモデルをダウンロードするには`curl`または`wget`を使用します。
 
 ```
+# curl
+curl -fsSL https://civitai.com/api/download/models/[model_id] -o /workspace/models/Stable-diffusion/[model_name].safetensors
+
+# wget
 wget https://civitai.com/api/download/models/[model_id] -O /workspace/models/Stable-diffusion/[model_name].safetensors
 ```
 
 ## 謝辞
 
-以下のプロジェクトおよびモデルの開発者とコミュニティに心より感謝申し上げます。  
+以下のプロジェクトおよびモデルの開発者とコミュニティに心より感謝申し上げます。\
 彼らの素晴らしい仕事が、このDockerイメージの作成に不可欠でした。
 
 ### プロジェクト
@@ -68,21 +72,25 @@ It can boot a bit faster, and it supports NVIDIA Blackwell.
 1. Launch a pod using this template.
 2. Wait for it to become ready. This usually takes about 1 minutes.
 3. Wait for the default model to download.
-  - Alternatively, download a custom model using the Web Terminal / Jupyter Notebook.
+   - Alternatively, download a custom model using the Web Terminal / Jupyter Notebook.
 4. Access port 7860.
 5. Enjoy!
 
 ## Model download
 
-Use `wget` to download additional models.
+Use `curl` or `wget` to download additional models.
 
 ```
+# curl
+curl -fsSL https://civitai.com/api/download/models/[model_id] -o /workspace/models/Stable-diffusion/[model_name].safetensors
+
+# wget
 wget https://civitai.com/api/download/models/[model_id] -O /workspace/models/Stable-diffusion/[model_name].safetensors
 ```
 
 ## Acknowledgements
 
-I would like to express my sincere gratitude to the developers and communities of the following projects and models.  
+I would like to express my sincere gratitude to the developers and communities of the following projects and models.\
 Their excellent work was instrumental in the creation of this Docker image.
 
 ### Projects
