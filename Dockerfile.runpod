@@ -19,6 +19,7 @@ RUN : Setup environment \
     curl \
     gosu \
     rsync \
+    axel \
     bc \
     libgl1 \
     libglib2.0-0 \
@@ -41,7 +42,8 @@ RUN : Setup environment \
 WORKDIR /workspace
 
 COPY ./entrypoint.sh /
-COPY ./download.sh /
+COPY ./custom_model.sh /
+COPY ./custom_script.sh /
 COPY ./label.sh /
 COPY ./Procfile /data/workspace
 

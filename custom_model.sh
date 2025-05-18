@@ -24,7 +24,7 @@ do
   fi
 
   echo "Downloading: ${model}"
-  curl -fsSL "${models[${model}]}" -o "${model_dir}/${model}.tmp"
+  axel -q -n 4 "${models[${model}]}" -o "${model_dir}/${model}.tmp"
   sync
   mv "${model_dir}/${model}.tmp" "${model_dir}/${model}"
   echo "Downloaded: ${model}"

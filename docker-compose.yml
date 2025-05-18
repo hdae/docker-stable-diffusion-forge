@@ -5,14 +5,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: hdae/stable-diffusion-forge-runpod:2025-05-10
+    image: hdae/stable-diffusion-forge-runpod:2025-05-16
     environment:
       - JUPYTER_PASSWORD=jupy73r
+    env_file:
+      - .env
     ports:
       - 7860:7860
       - 8888:8888
+    expose:
+      - 7860:7860
     volumes:
       - workspace:/workspace
+      - ./outputs:/workspace/outputs
     deploy:
       resources:
         reservations:
@@ -20,6 +25,39 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
+    healthcheck:
+      test: "curl http://localhost:7860/internal/ping"
+      interval: 10s
+      timeout: 10s
+      start_period: 10s
+      retries: 360
+
+  dynamic:
+    image: cloudflare/cloudflared
+    command: tunnel --url http://app:7860
+    profiles:
+      - dynamic
+    depends_on:
+      app:
+        condition: service_healthy
+    networks:
+      - default
+
+  # static:
+  #   image: cloudflare/cloudflared
+  #   command: tunnel run
+  #   environment:
+  #     - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+  #   profiles:
+  #     - static
+  #   depends_on:
+  #     app:
+  #       condition: service_healthy
+  #   networks:
+  #     - default
 
 volumes:
   workspace:
+
+networks:
+  default:
